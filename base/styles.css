@@ -1,0 +1,55 @@
+#EntryPopupContainer {
+  position: fixed;
+  z-index: 9990;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* 임시 스타일입니다. https://github.com/entrylabs/entryjs/pull/2723 머지 이후에 필요가 없습니다. begin  */
+* {
+  box-sizing: border-box;
+}
+
+img,
+fieldset,
+button {
+  border: 0;
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.entryPlaygroundPainter {
+  position: absolute;
+  left: 253px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  background-color: #f9f9f9;
+  &.fullscreen {
+    min-height: 547px;
+    top: 0;
+    left: 0;
+    z-index: 251;
+  }
+
+  .ControlPanel {
+    button {
+      vertical-align: top;
+    }
+  }
+}
+/* 임시 스타일입니다. https://github.com/entrylabs/entryjs/pull/2723 머지 이후에 필요가 없습니다. end  */
