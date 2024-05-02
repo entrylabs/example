@@ -13,6 +13,7 @@
   "author": "Ives van Hoorne",
   "license": "MIT",
   "devDependencies": {
-    "serve": "11.2.0"
+    "serve": "11.2.0",
+    "entry-js": "entrylabs/entryjs#v3.20240426.1107"
   }
 }

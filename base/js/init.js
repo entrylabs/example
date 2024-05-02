@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var initOption = {
     // 서비스하시는 상대/절대 경로로 지정해주세요.
-    libDir: "/lib",
+    libDir: "/node_modules",
     type: "workspace",
     textCodingEnable: true,
   };

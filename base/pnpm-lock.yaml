@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  entry-js:
+    specifier: entrylabs/entryjs#v3.20240426.1107
+    version: github.com/entrylabs/entryjs/bb74f5ecdf83c66e89aa80b04e1169558f29e4b2
   serve:
     specifier: 11.2.0
     version: 11.2.0
@@ -505,4 +508,10 @@ packages:
 
   /yallist@2.1.2:
     resolution: {integrity: sha512-ncTzHV7NvsQZkYe1DW7cbDLm0YpzHmZF5r/iyP3ZnQtMiJ+pjzisCiMNI+Sj+xQF5pXhSHxSB3uDbsBTzY/c2A==}
+    dev: true
+
+  github.com/entrylabs/entryjs/bb74f5ecdf83c66e89aa80b04e1169558f29e4b2:
+    resolution: {tarball: https://codeload.github.com/entrylabs/entryjs/tar.gz/bb74f5ecdf83c66e89aa80b04e1169558f29e4b2}
+    name: entryjs#v3.20240426.1107
+    version: 0.0.0
     dev: true
