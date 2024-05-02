@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML + CSS</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>EntryJS Base Example</title>
+    <link rel="stylesheet" href="/css/styles.css" />
     <link href="/lib/entry-js/dist/entry.css" rel="stylesheet" />
+    <link href="/lib/modal/dist/entry/entry-modal.css" rel="stylesheet" />
+    <link
+      href="https://entry-cdn.pstatic.net/lib/entry-lms/dist/assets/app.css"
+      rel="stylesheet"
+    />
     <link
       href="https://entry-cdn.pstatic.net/lib/entry-tool/dist/entry-tool.css"
       rel="stylesheet"
@@ -20,6 +25,8 @@
     <div id="workspace"></div>
     <div id="EntryPopupContainer"></div>
     <script src="/lib/entry-js/extern/lang/ko.js?v=240430-174210"></script>
+    <script src="/lib/entry-js/extern/util/static.js?v=240430-174210"></script>
+
     <script src="https://entry-cdn.pstatic.net/lib/lodash/dist/lodash.min.js?v=240430-174210"></script>
     <script src="https://entry-cdn.pstatic.net/js/react18/react.production.min.js?v=240430-174210"></script>
     <script src="https://entry-cdn.pstatic.net/js/react18/react-dom.production.min.js?v=240430-174210"></script>
@@ -40,20 +47,25 @@
     <script src="https://entry-cdn.pstatic.net/lib/fuzzy/lib/fuzzy.js?v=240430-174210"></script>
     <script src="https://entry-cdn.pstatic.net/js/ws/python.js?v=240430-174210"></script>
     <script src="https://entry-cdn.pstatic.net/lib/socket.io-client/socket.io.js?v=240430-174210"></script>
+    <script src="https://entry-cdn.pstatic.net/lib/components-webfontloader/webfontloader.js?v=240430-174210"></script>
+    <script src="https://entry-cdn.pstatic.net/lib/entry-lms/dist/assets/app.js?v=240430-174210"></script>
+    <script src="https://entry-cdn.pstatic.net/lib/entry-tool/dist/entry-tool.js?v=240430-174210"></script>
+    <script src="https://entry-cdn.pstatic.net/lib/entry-paint/dist/static/js/entry-paint.js?v=240430-174210"></script>
+    <script src="https://entry-cdn.pstatic.net/external/sound/sound-editor.js?v=240430-174210"></script>
+
     <script src="/lib/entry-js/extern/util/filbert.js?v=240430-174210"></script>
     <script src="/lib/entry-js/extern/util/CanvasInput.js?v=240430-174210"></script>
     <script src="/lib/entry-js/extern/util/ndgmr.Collision.js?v=240430-174210"></script>
     <script src="/lib/entry-js/extern/util/handle.js?v=240430-174210"></script>
     <script src="/lib/entry-js/extern/util/bignumber.min.js?v=240430-174210"></script>
-    <script src="https://entry-cdn.pstatic.net/lib/components-webfontloader/webfontloader.js?v=240430-174210"></script>
-    <script src="/lib/entry-js/extern/util/static.js?v=240430-174210"></script>
-    <script src="https://entry-cdn.pstatic.net/lib/entry-tool/dist/entry-tool.js?v=240430-174210"></script>
-    <script src="https://entry-cdn.pstatic.net/lib/entry-paint/dist/static/js/entry-paint.js?v=240430-174210"></script>
-    <script src="https://entry-cdn.pstatic.net/external/sound/sound-editor.js?v=240430-174210"></script>
     <script src="/lib/entry-js/dist/entry.js?v=240430-174210"></script>
-    <!-- <script src="https://local2.playentry.org/lib/entry-js/dist/entry.js?v=240430-174210"></script> -->
-    <script src="popup.js"></script>
-    <script src="event.js"></script>
-    <script src="init.js"></script>
+
+    <script src="/lib/modal/dist/entry-modal.js?v=240430-174210"></script>
+
+    <script src="/js/mock.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/popup.js"></script>
+    <script src="/js/event.js"></script>
+    <script src="/js/init.js"></script>
   </body>
 </html>
