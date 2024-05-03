@@ -46,6 +46,39 @@ export const spriteCategory = [
     },
 ];
 
+export const soundCategory = [
+    {
+        id: '5e1d9b5dac9e9644cc0ab589',
+        name: '사람',
+        value: 'people',
+        label: {
+            ko: '사람',
+            en: 'people',
+            ja: '人物',
+            vn: null,
+        },
+        categoryType: 'sound',
+        depth: 1,
+        categoryOrder: 0,
+        children: [
+            {
+                id: '5e20464eac9e9644cc0ab646',
+                name: '일상생활',
+                value: 'people_daily',
+                label: {
+                    ko: '일상생활',
+                    en: 'everyday life',
+                    ja: '日常生活',
+                    vn: null,
+                },
+                categoryType: 'sound',
+                depth: 2,
+                categoryOrder: 0,
+            },
+        ],
+    },
+];
+
 export const assets = {
     sprite: [
         {
@@ -198,6 +231,20 @@ export const assets = {
                 height: 390,
             },
             trimmed: null,
+        },
+    ],
+    sound: [
+        {
+            id: 1,
+            name: '기타 루프1',
+            label: {
+                ko: '기타 루프1',
+                en: '기타 루프1.mp3',
+                ja: null,
+                vn: '기타 루프1.mp3',
+            },
+            path: '/assets/sound/9pcv13o6la1u2rhr000q75262d1nupd0.mp3',
+            duration: 8,
         },
     ],
 };
