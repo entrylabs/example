@@ -7,7 +7,7 @@ import {
     failAlert,
 } from './index.mjs';
 
-function setSpritePopupEvent(popup) {
+export function setSpritePopupEvent(popup) {
     popup.on('fetch', (category) => {
         popup.setData({ data: { data: getAsset(category) } });
     });
@@ -30,5 +30,3 @@ function setSpritePopupEvent(popup) {
     popup.on('fail', failAlert);
     popup.on('error', failAlert);
 }
-
-export { setSpritePopupEvent };
