@@ -24,16 +24,6 @@ function installPopup() {
     },
   });
   setSpritePopupEvent();
-
-  const view = Entry.createElement("div");
-  new entrylms.Render({
-    target: view,
-    data: {
-      type: "HINT_LIST",
-      theme: "BLUE",
-      // content: hintPanel,
-    },
-  });
 }
 
 function getAsset(category) {
