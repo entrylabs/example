@@ -46,10 +46,10 @@ export const spriteCategory = [
     },
 ];
 
-export const objectAssets = {
+export const assets = {
     sprite: [
         {
-            id: '557fe88b77e7209c34993968',
+            id: 1,
             name: '(1)엔트리봇',
             label: {
                 ko: '(1)엔트리봇',
@@ -96,7 +96,7 @@ export const objectAssets = {
             ],
         },
         {
-            id: '63d20df17181a000306509b4',
+            id: 2,
             name: '궁수 엔트리봇',
             label: {
                 ko: '궁수 엔트리봇',
@@ -130,7 +130,7 @@ export const objectAssets = {
             sounds: [],
         },
         {
-            id: '55e87de2e443a90e6afe5e2a',
+            id: 3,
             name: '개구쟁이',
             label: {
                 ko: '개구쟁이',
@@ -162,6 +162,42 @@ export const objectAssets = {
                 },
             ],
             sounds: [],
+        },
+    ],
+    picture: [
+        {
+            id: 1,
+            name: '(1)엔트리봇_걷기1',
+            label: {
+                ko: '(1)엔트리봇_걷기1',
+                en: '(1)Entrybot_walk1',
+                ja: null,
+                vn: null,
+            },
+            fileurl: '/assets/image/a8268fd79a48fd9b92c7b47406b95393.png',
+            imageType: 'png',
+            dimension: {
+                width: 284,
+                height: 350,
+            },
+            trimmed: null,
+        },
+        {
+            id: 2,
+            name: '궁수 엔트리봇',
+            label: {
+                ko: '궁수 엔트리봇',
+                en: 'Archer entrybot',
+                ja: null,
+                vn: '궁수 엔트리봇.svg',
+            },
+            fileurl: '/assets/image/k4dcspn4ldcncd1l000q7ad3223e07m3.svg',
+            imageType: 'svg',
+            dimension: {
+                width: 390,
+                height: 390,
+            },
+            trimmed: null,
         },
     ],
 };
