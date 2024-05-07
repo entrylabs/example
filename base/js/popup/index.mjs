@@ -1,6 +1,7 @@
 import { setSpritePopupEvent } from './sprite.mjs';
 import { setPicturePopupEvent } from './picture.mjs';
 import { setSoundPopupEvent } from './sound.mjs';
+import { setTablePopupEvent } from './table.mjs';
 import { getSidebarTemplate } from '../util.mjs';
 import { spriteCategory, soundCategory, assets } from '../mock.mjs';
 
@@ -57,4 +58,11 @@ export function openSoundManager() {
     const sidebar = getSidebarTemplate({ category: soundCategory });
     popup.setData({ sidebar });
     popup.show({ type: 'sound' }, {});
+}
+
+export function openTableManager() {
+    popup.removeAllListeners();
+    setTablePopupEvent(popup);
+    popup.setData({ sidebar: {} });
+    popup.show({ type: 'table' }, {});
 }
