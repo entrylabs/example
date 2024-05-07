@@ -2,6 +2,7 @@ import { setSpritePopupEvent } from './sprite.mjs';
 import { setPicturePopupEvent } from './picture.mjs';
 import { setSoundPopupEvent } from './sound.mjs';
 import { setTablePopupEvent } from './table.mjs';
+import { getAiUtilizeBlocks, setAIUtilizePopupEvent } from './aIUtilize.mjs';
 import { getSidebarTemplate } from '../util.mjs';
 import { spriteCategory, soundCategory, assets } from '../mock.mjs';
 
@@ -65,4 +66,14 @@ export function openTableManager() {
     setTablePopupEvent(popup);
     popup.setData({ sidebar: {} });
     popup.show({ type: 'table' }, {});
+}
+
+export function openAIUtilizeBlockManager() {
+    popup.removeAllListeners();
+    setAIUtilizePopupEvent(popup);
+    popup.setData({ sidebar: {} });
+    popup.show(
+        { type: 'aiUtilize', imageBaseUrl: '/node_modules/entry-js/images/aiUtilize/' },
+        { data: { data: getAiUtilizeBlocks() } }
+    );
 }
