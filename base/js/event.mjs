@@ -1,3 +1,4 @@
+import { openImportListModal, openExportListModal } from './listTool/index.mjs';
 import { openSpriteManager, openPictureManager, openSoundManager } from './popup/index.mjs';
 
 export function installEntryEvent() {
@@ -5,4 +6,6 @@ export function installEntryEvent() {
     Entry.addEventListener('openSpriteManager', openSpriteManager);
     Entry.addEventListener('openPictureManager', openPictureManager);
     Entry.addEventListener('openSoundManager', openSoundManager);
+    Entry.addEventListener('openImportListModal', openImportListModal);
+    Entry.addEventListener('openExportListModal', openExportListModal);
 }

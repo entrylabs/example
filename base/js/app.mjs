@@ -1,4 +1,5 @@
 import { installPopup } from './popup/index.mjs';
+import { installListTool } from './listTool/index.mjs';
 import { installEntryEvent } from './event.mjs';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Entry.creationChangedEvent = new Entry.Event(window);
     Entry.init(document.getElementById('workspace'), initOption);
     installPopup();
+    installListTool();
     installEntryEvent();
     Entry.loadProject();
 });
