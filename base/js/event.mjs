@@ -4,6 +4,7 @@ import {
     openPictureManager,
     openSoundManager,
     openTableManager,
+    openExpansionBlockManager,
     openAIUtilizeBlockManager,
 } from './popup/index.mjs';
 
@@ -15,5 +16,6 @@ export function installEntryEvent() {
     Entry.addEventListener('openImportListModal', openImportListModal);
     Entry.addEventListener('openExportListModal', openExportListModal);
     Entry.addEventListener('openTableManager', openTableManager);
+    Entry.addEventListener('openExpansionBlockManager', openExpansionBlockManager);
     Entry.addEventListener('openAIUtilizeBlockManager', openAIUtilizeBlockManager);
 }
