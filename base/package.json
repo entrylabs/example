@@ -4,7 +4,7 @@
     "description": "A template for HTML and CSS",
     "main": "index.html",
     "scripts": {
-        "start": "serve"
+        "start": "serve -l 3001"
     },
     "keywords": [
         "html",
@@ -16,6 +16,6 @@
         "serve": "11.2.0"
     },
     "dependencies": {
-        "@entrylabs/entry": "^4.0.1"
+        "@entrylabs/entry": "^4.0.2"
     }
 }

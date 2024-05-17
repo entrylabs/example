@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@entrylabs/entry':
-        specifier: ^4.0.1
-        version: 4.0.1(seedrandom@2.4.3)
+        specifier: ^4.0.2
+        version: 4.0.2(seedrandom@2.4.3)
     devDependencies:
       serve:
         specifier: 11.2.0
@@ -123,8 +123,8 @@ packages:
     engines: {node: '>=0.1.95'}
     hasBin: true
 
-  '@entrylabs/entry@4.0.1':
-    resolution: {integrity: sha512-7C9RV/sswgeGnvxuvKaR/P6fuyZrImI6monWNEg3Ogvwqj56FEhBMTBOV8Bp/WHj7RFahhQQOZ0W3MkAdgkttg==}
+  '@entrylabs/entry@4.0.2':
+    resolution: {integrity: sha512-yxlfPzt/kzXQTvCKucRdhM0fvMdQknqDHM1eYwR6Rj5em9aBohqRBGVdszWIhPQuS7j8gFAlgpFJAgH3H+2V2Q==}
 
   '@entrylabs/event@1.0.3':
     resolution: {integrity: sha512-IDC7sWnfe8GVQIEGsct9Bcsj1Nh4XikO6PG+veVuix0Zv/XH98NkFjmXiyrriJ/rjJoGFBq6sKesfmaFCCr3MA==}
@@ -3026,7 +3026,7 @@ snapshots:
       exec-sh: 0.3.6
       minimist: 1.2.8
 
-  '@entrylabs/entry@4.0.1(seedrandom@2.4.3)':
+  '@entrylabs/entry@4.0.2(seedrandom@2.4.3)':
     dependencies:
       '@entrylabs/event': 1.0.3
       '@mediapipe/tasks-vision': 0.10.14

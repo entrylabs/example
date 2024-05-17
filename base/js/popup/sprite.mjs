@@ -1,4 +1,5 @@
 import { getAsset, uploadFail, failAlert } from './index.mjs';
+import { fetchWithBaseUrl } from '../util/index.mjs';
 
 function addObjects(data) {
     const objects = data.selected;
@@ -66,25 +67,49 @@ function addTextObject(data) {
     Entry.container.addObject(object, 0);
 }
 
+function uploadObjects(objects) {
+    objects.forEach((item) => {
+        if (!item.id) {
+            item.id = Entry.generateHash();
+        }
+
+        const object = {
+            id: Entry.generateHash(),
+            objectType: 'sprite',
+            sprite: {
+                name: item.name,
+                pictures: [item],
+                sounds: [],
+                category: {},
+            },
+        };
+        Entry.container.addObject(object, 0);
+    });
+}
+
 export function setSpritePopupEvent(popup) {
-    popup.on('fetch', (category) => {
-        popup.setData({ data: { data: getAsset(category) } });
+    popup.on('fetch', async (category) => {
+        const { sidebar, subMenu } = category;
+        const data = await fetchWithBaseUrl(`/api/sprites/categories/${sidebar}/${subMenu}`);
+        popup.setData({ data: { data } });
     });
-    popup.on('search', (data) => {
-        // data 파라미터를 기반으로 list를 구성한다.(API 서버 영역)
-        console.log('search', data);
+    popup.on('search', async ({ searchQuery }) => {
+        const data = await fetchWithBaseUrl(`/api/sprites/search?query=${searchQuery}`);
+        popup.setData({ data: { data } });
     });
-    popup.on('dummyUploads', (data) => {
-        // data 파라미터를 기반으로 업로드를 구성한다.(API 서버 영역)
-        console.log('dummyUploads', data);
+    popup.on('dummyUploads', async ({ formData }) => {
+        const data = await fetchWithBaseUrl(`/api/sprites`, {
+            method: 'post',
+            body: formData,
+        });
+        popup.setData({
+            data: { uploads: data, data: [] },
+        });
     });
     popup.on('submit', addObjects);
     popup.on('draw', addEmptyObject);
     popup.on('write', addTextObject);
-    popup.on('uploads', (data) => {
-        // data 파라미터를 기반으로 오브젝트 업로드를 구성한다.(API 서버 영역)
-        console.log('uploads', data);
-    });
+    popup.on('uploads', uploadObjects);
     popup.on('uploadFail', uploadFail);
     popup.on('fail', failAlert);
     popup.on('error', failAlert);

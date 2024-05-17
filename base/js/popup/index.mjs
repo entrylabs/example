@@ -74,7 +74,7 @@ export function openExpansionBlockManager() {
     setExpansionPopupEvent(popup);
     popup.setData({ sidebar: {} });
     popup.show(
-        { type: 'expansion', imageBaseUrl: '/node_modules/entry-js/images/hardware/' },
+        { type: 'expansion', imageBaseUrl: '/node_modules/@entrylabs/entry/images/hardware/' },
         { data: { data: getExpansionBlocks() } }
     );
 }
@@ -84,7 +84,7 @@ export function openAIUtilizeBlockManager() {
     setAIUtilizePopupEvent(popup);
     popup.setData({ sidebar: {} });
     popup.show(
-        { type: 'aiUtilize', imageBaseUrl: '/node_modules/entry-js/images/aiUtilize/' },
+        { type: 'aiUtilize', imageBaseUrl: '/node_modules/@entrylabs/entry/images/aiUtilize/' },
         { data: { data: getAiUtilizeBlocks() } }
     );
 }
