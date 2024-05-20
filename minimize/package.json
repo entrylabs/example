@@ -1,7 +1,7 @@
 {
-    "name": "base",
+    "name": "minimize",
     "version": "1.0.0",
-    "description": "A template for Entry",
+    "description": "A template for Entry minimize",
     "main": "index.html",
     "scripts": {
         "start": "serve -l 3001"

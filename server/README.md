@@ -1,7 +1,3 @@
-# Working...
-
-현재 이 레포지토리는 작업중 입니다. 현재는 기능의 일부만 구현되었습니다.
-
 # Entry Server example
 
 이 예제에서는 Entryjs의 API 서버의 예를 보여 줍니다.
