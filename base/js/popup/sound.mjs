@@ -1,4 +1,4 @@
-import { getAsset, uploadFail, failAlert } from './index.mjs';
+import { uploadFail, failAlert } from './index.mjs';
 import { fetchWithBaseUrl } from '../util/index.mjs';
 
 function addSounds(data) {
