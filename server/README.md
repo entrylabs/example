@@ -32,6 +32,6 @@ pnpm start
 
 ## RoadMap
 
--   [X] 오브젝트 API
--   [ ] 모양 API
+-   [x] 오브젝트 API
+-   [x] 모양 API
 -   [ ] 소리 API

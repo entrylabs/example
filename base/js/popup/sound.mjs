@@ -1,4 +1,5 @@
 import { getAsset, uploadFail, failAlert } from './index.mjs';
+import { fetchWithBaseUrl } from '../util/index.mjs';
 
 function addSounds(data) {
     const sounds = data.selected;
@@ -14,7 +15,7 @@ function loadSound(items) {
         if (!Entry.soundQueue.getItem(item.id) && item.path) {
             Entry.soundQueue.loadFile({
                 id: item.id,
-                src: item.path,
+                src: item.fileurl || item.path,
                 type: createjs.LoadQueue.SOUND,
             });
         }
@@ -49,7 +50,7 @@ function soundLoadAndPlay(item) {
         playFunc = Entry.soundQueue.on('fileload', soundPlay);
         Entry.soundQueue.loadFile({
             id: item.id,
-            src: item.path,
+            src: item.fileurl || item.path,
             type: createjs.LoadQueue.SOUND,
         });
     }
@@ -72,17 +73,33 @@ function playSound(item) {
     }
 }
 
+function uploadSounds(data) {
+    const sounds = data.uploads;
+    sounds.forEach((item) => {
+        item.id = Entry.generateHash();
+        Entry.playground.addSound(item, true);
+    });
+    Entry.Utils.forceStopSounds();
+}
+
 export function setSoundPopupEvent(popup) {
-    popup.on('fetch', (category) => {
-        popup.setData({ data: { data: getAsset(category) } });
+    popup.on('fetch', async (category) => {
+        const { sidebar, subMenu } = category;
+        const data = await fetchWithBaseUrl(`/api/sound/categories/${sidebar}/${subMenu}`);
+        popup.setData({ data: { data } });
     });
-    popup.on('search', (data) => {
-        // data 파라미터를 기반으로 list를 구성한다.(API 서버 영역)
-        console.log('search', data);
+    popup.on('search', async ({ searchQuery }) => {
+        const data = await fetchWithBaseUrl(`/api/sound/search?query=${searchQuery}`);
+        popup.setData({ data: { data } });
     });
-    popup.on('dummyUploads', (data) => {
-        // data 파라미터를 기반으로 업로드를 구성한다.(API 서버 영역)
-        console.log('dummyUploads', data);
+    popup.on('dummyUploads', async ({ formData }) => {
+        const data = await fetchWithBaseUrl(`/api/sound`, {
+            method: 'post',
+            body: formData,
+        });
+        popup.setData({
+            data: { uploads: data, data: [] },
+        });
     });
     popup.on('submit', addSounds);
     popup.on('loaded', loadSound);
@@ -90,10 +107,7 @@ export function setSoundPopupEvent(popup) {
     popup.on('hide', stopAllSound);
     popup.on('play', playSound);
     popup.on('stop', stopSound);
-    popup.on('uploads', (data) => {
-        // data 파라미터를 기반으로 오브젝트 업로드를 구성한다.(API 서버 영역)
-        console.log('uploads', data);
-    });
+    popup.on('uploads', uploadSounds);
     popup.on('uploadFail', uploadFail);
     popup.on('fail', failAlert);
     popup.on('error', failAlert);

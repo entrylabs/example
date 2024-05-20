@@ -1,4 +1,4 @@
-import { getAsset, uploadFail, failAlert } from './index.mjs';
+import { uploadFail, failAlert } from './index.mjs';
 import { fetchWithBaseUrl } from '../util/index.mjs';
 
 function addObjects(data) {
@@ -90,15 +90,15 @@ function uploadObjects(objects) {
 export function setSpritePopupEvent(popup) {
     popup.on('fetch', async (category) => {
         const { sidebar, subMenu } = category;
-        const data = await fetchWithBaseUrl(`/api/sprites/categories/${sidebar}/${subMenu}`);
+        const data = await fetchWithBaseUrl(`/api/sprite/categories/${sidebar}/${subMenu}`);
         popup.setData({ data: { data } });
     });
     popup.on('search', async ({ searchQuery }) => {
-        const data = await fetchWithBaseUrl(`/api/sprites/search?query=${searchQuery}`);
+        const data = await fetchWithBaseUrl(`/api/sprite/search?query=${searchQuery}`);
         popup.setData({ data: { data } });
     });
     popup.on('dummyUploads', async ({ formData }) => {
-        const data = await fetchWithBaseUrl(`/api/sprites`, {
+        const data = await fetchWithBaseUrl(`/api/sprite`, {
             method: 'post',
             body: formData,
         });
