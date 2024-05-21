@@ -5,6 +5,7 @@ import { setTablePopupEvent } from './table.mjs';
 import { getExpansionBlocks, setExpansionPopupEvent } from './expansion.mjs';
 import { getAiUtilizeBlocks, setAIUtilizePopupEvent } from './aIUtilize.mjs';
 import { getSidebarTemplate } from '../util.mjs';
+import { spriteCategory, soundCategory, assets } from '../mock.mjs';
 
 var popup;
 

@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
         libDir: '/node_modules',
         type: 'workspace',
         textCodingEnable: true,
+        backpackDisable: true,
+        exportObjectEnable: false,
     };
     Entry.creationChangedEvent = new Entry.Event(window);
     Entry.init(document.getElementById('workspace'), initOption);

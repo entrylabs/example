@@ -4,7 +4,7 @@
     "description": "A template for Entry minimize",
     "main": "index.html",
     "scripts": {
-        "start": "serve -l 3001"
+        "start": "serve -l 3002"
     },
     "keywords": [
         "html",
@@ -16,7 +16,7 @@
         "serve": "11.2.0"
     },
     "dependencies": {
-        "@entrylabs/entry": "^4.0.3",
+        "@entrylabs/entry": "^4.0.4",
         "@entrylabs/legacy-video": "^1.0.1"
     }
 }
