@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         textCodingEnable: true,
         backpackDisable: true,
         exportObjectEnable: false,
+        iframeDomAccess: 'none', //direct, message, none
     };
     Entry.creationChangedEvent = new Entry.Event(window);
     Entry.init(document.getElementById('workspace'), initOption);
