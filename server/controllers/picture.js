@@ -33,4 +33,12 @@ function uploadPictureAsset(_req, res) {
     res.send(uploadSample);
 }
 
-export { getPictures, getPicturesBySearchTerm, uploadPictureAsset };
+function savePaintedPicture(req, res) {
+    const { image, file } = req.body;
+    // 서버의 특정 위치에 저장로직 구현
+    // svg이미지 같은 경우 같은 위치에 svg, png를 동시에 저장해야함.
+    // png는 썸네일 역할
+    res.send(uploadSample[0]);
+}
+
+export { getPictures, getPicturesBySearchTerm, uploadPictureAsset, savePaintedPicture };

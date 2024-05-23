@@ -8,4 +8,6 @@ router.get('/api/picture/search', cont.getPicturesBySearchTerm);
 
 router.post('/api/picture', cont.uploadPictureAsset);
 
+router.post('/api/picture/paint', cont.savePaintedPicture);
+
 export default router;

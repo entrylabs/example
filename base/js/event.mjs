@@ -8,6 +8,8 @@ import {
     openAIUtilizeBlockManager,
 } from './popup/index.mjs';
 
+import { saveCanvasImage } from './picture/index.mjs';
+
 export function installEntryEvent() {
     Entry.addEventListener('dismissModal');
     Entry.addEventListener('openSpriteManager', openSpriteManager);
@@ -18,4 +20,7 @@ export function installEntryEvent() {
     Entry.addEventListener('openTableManager', openTableManager);
     Entry.addEventListener('openExpansionBlockManager', openExpansionBlockManager);
     Entry.addEventListener('openAIUtilizeBlockManager', openAIUtilizeBlockManager);
+
+    //그림판 이미지 저장
+    Entry.addEventListener('saveCanvasImage', saveCanvasImage);
 }
