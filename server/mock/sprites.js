@@ -23,6 +23,7 @@ const sprites = [
                     vn: '(1)Entrybot_walk1',
                 },
                 fileurl: '/assets/image/a8268fd79a48fd9b92c7b47406b95393.png',
+                thumbUrl: '/assets/thumb/a8268fd79a48fd9b92c7b47406b95393.png',
                 imageType: null,
                 dimension: {
                     width: 284,
@@ -70,6 +71,7 @@ const sprites = [
                     vn: '궁수 엔트리봇.svg',
                 },
                 fileurl: '/assets/image/k4dcspn4ldcncd1l000q7ad3223e07m3.svg',
+                thumbUrl: '/assets/thumb/k4dcspn4ldcncd1l000q7ad3223e07m3.png',
                 imageType: 'svg',
                 dimension: {
                     width: 390,
@@ -104,6 +106,7 @@ const sprites = [
                     vn: 'Playful child_1',
                 },
                 fileurl: '/assets/image/ba7d688dfacfcb77d61b952669372d9d.png',
+                thumbUrl: '/assets/thumb/ba7d688dfacfcb77d61b952669372d9d.png',
                 imageType: null,
                 dimension: {
                     width: 215,
@@ -120,7 +123,7 @@ const uploadSample = [
     {
         name: '엔트리봇',
         fileurl: '/assets/image/a8268fd79a48fd9b92c7b47406b95393.png',
-        filename: '/assets/image/a8268fd79a48fd9b92c7b47406b95393.png',
+        thumbUrl: '/assets/thumb/a8268fd79a48fd9b92c7b47406b95393.png',
         label: {
             ko: '엔트리봇',
             en: 'Entrybot',
@@ -135,6 +138,7 @@ const uploadSample = [
         specials: [],
         origin: {
             fileurl: '/assets/image/a8268fd79a48fd9b92c7b47406b95393.png',
+            thumbUrl: '/assets/thumb/a8268fd79a48fd9b92c7b47406b95393.png',
             width: 284,
             height: 350,
         },

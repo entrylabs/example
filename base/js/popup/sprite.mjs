@@ -26,6 +26,7 @@ function addEmptyObject() {
                         height: 540,
                     },
                     fileurl: `${Entry.mediaFilePath}_1x1.png`,
+                    thumbUrl: `${Entry.mediaFilePath}_1x1.png`,
                     name: Lang.Workspace.new_picture,
                     type: '_system_',
                 },

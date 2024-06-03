@@ -16,6 +16,7 @@ function addEmptyPicture() {
             width: 1,
         },
         fileurl: `${Entry.mediaFilePath}_1x1.png`,
+        thumbUrl: `${Entry.mediaFilePath}_1x1.png`,
         name: Lang.Workspace.new_picture,
     };
     Entry.playground.addPicture(item, true);

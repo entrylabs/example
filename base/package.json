@@ -16,7 +16,8 @@
         "serve": "11.2.0"
     },
     "dependencies": {
-        "@entrylabs/entry": "^4.0.7",
-        "@entrylabs/legacy-video": "^1.0.1"
+        "@entrylabs/entry": "^4.0.8",
+        "@entrylabs/legacy-video": "^1.0.1",
+        "@entrylabs/tool": "^2.0.0"
     }
 }
