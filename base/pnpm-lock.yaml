@@ -15,8 +15,8 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1
       '@entrylabs/tool':
-        specifier: ^2.0.0
-        version: 2.0.0(mapbox-gl@1.13.3)(react-dom@16.14.0(react@16.14.0))(react-redux@5.1.2(react@16.14.0)(redux@4.2.1))(react@16.14.0)(redux@4.2.1)
+        specifier: ^2.0.1
+        version: 2.0.1(mapbox-gl@1.13.3)(react-dom@16.14.0(react@16.14.0))(react-redux@5.1.2(react@16.14.0)(redux@4.2.1))(react@16.14.0)(redux@4.2.1)
     devDependencies:
       serve:
         specifier: 11.2.0
@@ -246,8 +246,8 @@ packages:
     resolution: {integrity: sha512-hNf9s4t5dmexSY3ioMrVx929fQuH6zo8DD9+ALvY1EE04nRTniS48TaXvqS1k5O4fdssw4aksf8Jr4v9n0nxBg==}
     engines: {node: '>=6.0.0'}
 
-  '@entrylabs/tool@2.0.0':
-    resolution: {integrity: sha512-5V3ugtWIrQxNpHanoGLErW0e21QewR0cSN78mvxbK5IhY6lXX2jfVujCytygSLc1bk8bDNL7BSvkA2amEchPfg==}
+  '@entrylabs/tool@2.0.1':
+    resolution: {integrity: sha512-yRrzeTLNkT/MqmlSPv3ytXBC4UISB916c+r7Opxd+/cgx2tuy9vOmNuduOialR6ALOlMhsnH0DBk7AdmIUszVg==}
     engines: {node: '>=8.9.x', npm: '=>6.x'}
 
   '@istanbuljs/load-nyc-config@1.1.0':
@@ -5362,7 +5362,7 @@ snapshots:
       postcss: 7.0.39
       xxhashjs: 0.2.2
 
-  '@entrylabs/tool@2.0.0(mapbox-gl@1.13.3)(react-dom@16.14.0(react@16.14.0))(react-redux@5.1.2(react@16.14.0)(redux@4.2.1))(react@16.14.0)(redux@4.2.1)':
+  '@entrylabs/tool@2.0.1(mapbox-gl@1.13.3)(react-dom@16.14.0(react@16.14.0))(react-redux@5.1.2(react@16.14.0)(redux@4.2.1))(react@16.14.0)(redux@4.2.1)':
     dependencies:
       '@babel/runtime': 7.24.6
       '@egjs/react-infinitegrid': 4.11.1

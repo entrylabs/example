@@ -24,15 +24,6 @@ async function loadRoutes(directory) {
     }
 }
 
-var corsOptions = {
-    origin: 'http://localhost:3001',
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
-// app.use((req, res, ) => {
-
-// }));
-// app.use(cors(corsOptions));
 app.use((req, res, next) => {
     const origin = req.headers.origin;
 

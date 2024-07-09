@@ -1,5 +1,5 @@
 import { uploadFail, failAlert } from './index.mjs';
-import { fetchWithBaseUrl } from '../util/index.mjs';
+import { fetchUploadWithBaseUrl, fetchWithBaseUrl } from '../util/index.mjs';
 
 function addSounds(data) {
     const sounds = data.selected;
@@ -93,7 +93,7 @@ export function setSoundPopupEvent(popup) {
         popup.setData({ data: { data } });
     });
     popup.on('dummyUploads', async ({ formData }) => {
-        const data = await fetchWithBaseUrl(`/api/sound`, {
+        const data = await fetchUploadWithBaseUrl(`/api/sound`, {
             method: 'post',
             body: formData,
         });

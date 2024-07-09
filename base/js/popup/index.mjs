@@ -62,7 +62,7 @@ export function openSoundManager() {
     popup.show({ type: 'sound' }, {});
 }
 
-export function openTableManager() {
+export function openTableManager(data) {
     popup.removeAllListeners();
     setTablePopupEvent(popup);
     popup.setData({ sidebar: {} });

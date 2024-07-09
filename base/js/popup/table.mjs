@@ -1,24 +1,55 @@
-import { getAsset, uploadFail, failAlert } from './index.mjs';
+import { uploadFail, failAlert } from './index.mjs';
+import { fetchWithBaseUrl, fetchUploadWithBaseUrl } from '../util/index.mjs';
+
+async function addTables(tables = []) {
+    const tableInfos = await Promise.all(
+        tables.map(async ({ projectTable, selected, ...infos } = {}) => {
+            let { data: origin, fields } = projectTable;
+            const max = _.max([fields.length, ..._.map(origin, (row) => row.length)]);
+            fields = _.concat(fields, new Array(max - fields.length).fill(''));
+            origin = _.map(origin, (row) => _.concat(row, new Array(max - row.length).fill('')));
+            return { ...projectTable, ...infos, fields, data: origin };
+        })
+    );
+    Entry.playground.dataTable.addSources(tableInfos);
+    Entry.creationChangedEvent.notify();
+}
 
 export function setTablePopupEvent(popup) {
-    popup.on('fetch', (category) => {
-        popup.setData({ data: { data: getAsset(category) } });
+    popup.on('fetch', async (category) => {
+        const data = await fetchWithBaseUrl(`/api/table`);
+        popup.setData({ data: { data } });
     });
-    popup.on('search', (data) => {
-        // data 파라미터를 기반으로 list를 구성한다.(API 서버 영역)
-        console.log('search', data);
-    });
-    popup.on('dummyUploads', (data) => {
-        // data 파라미터를 기반으로 업로드를 구성한다.(API 서버 영역)
-        console.log('dummyUploads', data);
+    popup.on('search', async ({ searchQuery }) => {
+        if (searchQuery === '') {
+            return;
+        }
+        const data = await fetchWithBaseUrl(`/api/table/search?query=${searchQuery}`);
+        popup.setData({ data: { data } });
     });
     popup.on('submit', (data) => {
-        // data 파라미터를 기반으로 테이블 추가를 구성한다.(API 서버 영역)
-        console.log('submit', data);
+        const { selected = [] } = data || [];
+        addTables(
+            selected.map(({ id, ...others }) => ({
+                _id: id,
+                ...others,
+            }))
+        );
+        Entry.creationChangedEvent?.notify();
+    });
+    popup.on('dummyUploads', async ({ formData }) => {
+        const data = await fetchUploadWithBaseUrl(`/api/table`, {
+            method: 'post',
+            body: formData,
+        });
+
+        popup.setData({
+            data: { uploads: data, data: [] },
+        });
     });
     popup.on('uploads', (data) => {
-        // data 파라미터를 기반으로 테이블 업로드를 구성한다.(API 서버 영역)
-        console.log('uploads', data);
+        addTables(data.uploads);
+        Entry.creationChangedEvent?.notify();
     });
     popup.on('uploadFail', uploadFail);
     popup.on('fail', failAlert);

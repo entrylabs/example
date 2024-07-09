@@ -1,5 +1,5 @@
 import { uploadFail, failAlert } from './index.mjs';
-import { fetchWithBaseUrl } from '../util/index.mjs';
+import { fetchUploadWithBaseUrl, fetchWithBaseUrl } from '../util/index.mjs';
 
 function addPictures(data) {
     const pictures = data.selected;
@@ -41,7 +41,7 @@ export function setPicturePopupEvent(popup) {
         popup.setData({ data: { data } });
     });
     popup.on('dummyUploads', async ({ formData }) => {
-        const data = await fetchWithBaseUrl(`/api/picture`, {
+        const data = await fetchUploadWithBaseUrl(`/api/picture`, {
             method: 'post',
             body: formData,
         });

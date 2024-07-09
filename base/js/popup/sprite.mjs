@@ -1,5 +1,5 @@
 import { uploadFail, failAlert } from './index.mjs';
-import { fetchWithBaseUrl } from '../util/index.mjs';
+import { fetchUploadWithBaseUrl, fetchWithBaseUrl } from '../util/index.mjs';
 
 function addObjects(data) {
     const objects = data.selected;
@@ -99,7 +99,7 @@ export function setSpritePopupEvent(popup) {
         popup.setData({ data: { data } });
     });
     popup.on('dummyUploads', async ({ formData }) => {
-        const data = await fetchWithBaseUrl(`/api/sprite`, {
+        const data = await fetchUploadWithBaseUrl(`/api/sprite`, {
             method: 'post',
             body: formData,
         });
