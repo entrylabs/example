@@ -51,6 +51,16 @@ export function setTablePopupEvent(popup) {
         addTables(data.uploads);
         Entry.creationChangedEvent?.notify();
     });
+    popup.on('draw', (data) => {
+        Entry.playground.dataTable.addSources([
+            {
+                name: '테이블',
+                fields: new Array(10).fill(''),
+                data: new Array(29).fill(new Array(10).fill('')),
+            },
+        ]);
+        Entry.creationChangedEvent.notify();
+    });
     popup.on('uploadFail', uploadFail);
     popup.on('fail', failAlert);
     popup.on('error', failAlert);
