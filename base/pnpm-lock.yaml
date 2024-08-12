@@ -15,8 +15,8 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1
       '@entrylabs/tool':
-        specifier: ^2.0.3
-        version: 2.0.3(mapbox-gl@1.13.3)(react-dom@16.14.0(react@16.14.0))(react-redux@5.1.2(react@16.14.0)(redux@4.2.1))(react@16.14.0)(redux@4.2.1)
+        specifier: ^2.0.4
+        version: 2.0.4(mapbox-gl@1.13.3)(react-dom@16.14.0(react@16.14.0))(react-redux@5.1.2(react@16.14.0)(redux@4.2.1))(react@16.14.0)(redux@4.2.1)
     devDependencies:
       serve:
         specifier: 11.2.0
@@ -246,8 +246,8 @@ packages:
     resolution: {integrity: sha512-hNf9s4t5dmexSY3ioMrVx929fQuH6zo8DD9+ALvY1EE04nRTniS48TaXvqS1k5O4fdssw4aksf8Jr4v9n0nxBg==}
     engines: {node: '>=6.0.0'}
 
-  '@entrylabs/tool@2.0.3':
-    resolution: {integrity: sha512-y9N4isGOfp1W4W8tDwHt1n2zQjJbEcardPxOYggVh8rMeOEMaSMjkI08GYI6v0sLYCyK7ecBz2Lun6OZYGKzFg==}
+  '@entrylabs/tool@2.0.4':
+    resolution: {integrity: sha512-xmI1H1o8Vs5As9+S8KmVxHchOQQNJQ1aDQ2vDy/SD1hjPgIeGvqrUQ+VM+m0zApah+5xAY+QP5CGXLHKSHYLgA==}
     engines: {node: '>=8.9.x', npm: '=>6.x'}
 
   '@istanbuljs/load-nyc-config@1.1.0':
@@ -5362,7 +5362,7 @@ snapshots:
       postcss: 7.0.39
       xxhashjs: 0.2.2
 
-  '@entrylabs/tool@2.0.3(mapbox-gl@1.13.3)(react-dom@16.14.0(react@16.14.0))(react-redux@5.1.2(react@16.14.0)(redux@4.2.1))(react@16.14.0)(redux@4.2.1)':
+  '@entrylabs/tool@2.0.4(mapbox-gl@1.13.3)(react-dom@16.14.0(react@16.14.0))(react-redux@5.1.2(react@16.14.0)(redux@4.2.1))(react@16.14.0)(redux@4.2.1)':
     dependencies:
       '@babel/runtime': 7.24.6
       '@egjs/react-infinitegrid': 4.11.1
@@ -5558,7 +5558,9 @@ snapshots:
       source-map: 0.6.1
       string-length: 2.0.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
   '@jest/reporters@26.6.2':
     dependencies:
@@ -8882,9 +8884,7 @@ snapshots:
       pretty-format: 24.9.0
       throat: 4.1.0
     transitivePeerDependencies:
-      - bufferutil
       - supports-color
-      - utf-8-validate
 
   jest-jasmine2@26.6.3:
     dependencies:
