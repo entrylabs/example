@@ -66,7 +66,7 @@ export function openTableManager(data) {
     popup.removeAllListeners();
     setTablePopupEvent(popup);
     popup.setData({ sidebar: {} });
-    popup.show({ type: 'table' }, {});
+    popup.show({ type: 'table' }, { data: { data: [] } });
 }
 
 export function openExpansionBlockManager() {
