@@ -62,3 +62,18 @@ button {
     z-index: 1000;
 }
 /* 임시 스타일입니다. https://github.com/entrylabs/entryjs/pull/2723 머지 이후에 필요가 없습니다. end  */
+
+.header {
+    position: absolute;
+    z-index: 100;
+    bottom: 30px;
+    left: 30px;
+}
+
+.header button {
+    border: 1px solid;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    background-color: #efefef;
+}
