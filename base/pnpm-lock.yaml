@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@entrylabs/entry':
-        specifier: ^4.0.11
-        version: 4.0.11(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))
+        specifier: ^4.0.12
+        version: 4.0.12(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))
       '@entrylabs/legacy-video':
         specifier: ^1.0.1
         version: 1.0.1
@@ -227,8 +227,8 @@ packages:
   '@egjs/react-infinitegrid@4.11.1':
     resolution: {integrity: sha512-hiTFRhuqUzn3yGTf3v7GUOfZit0A97/4FdExyFCJWRx9JJQAScb04h6B0oAXbuY9QGw04rsptLTHGxsR/SWdmA==}
 
-  '@entrylabs/entry@4.0.11':
-    resolution: {integrity: sha512-SxiYVuYuNt0+42Ig3rl4scN/vr8pLekCGozdIa0L3J9P116JG+PDVJag0IEoqFeg7kV5yYFg8QlcC10Q5pIJAg==}
+  '@entrylabs/entry@4.0.12':
+    resolution: {integrity: sha512-CqjWvKsuisr7TYrF04qZt5OlisZ5OwkLsj4eNItHEdz4FlQIwPDiaTaQZeWz+2JSzjgBP5EHQhIU0q2A1kucKg==}
 
   '@entrylabs/event@1.0.3':
     resolution: {integrity: sha512-IDC7sWnfe8GVQIEGsct9Bcsj1Nh4XikO6PG+veVuix0Zv/XH98NkFjmXiyrriJ/rjJoGFBq6sKesfmaFCCr3MA==}
@@ -5276,7 +5276,7 @@ snapshots:
     dependencies:
       '@egjs/infinitegrid': 4.11.1
 
-  '@entrylabs/entry@4.0.11(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))':
+  '@entrylabs/entry@4.0.12(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))':
     dependencies:
       '@entrylabs/event': 1.0.3
       '@mediapipe/tasks-vision': 0.10.14
@@ -5558,9 +5558,7 @@ snapshots:
       source-map: 0.6.1
       string-length: 2.0.0
     transitivePeerDependencies:
-      - bufferutil
       - supports-color
-      - utf-8-validate
 
   '@jest/reporters@26.6.2':
     dependencies:
@@ -8884,7 +8882,9 @@ snapshots:
       pretty-format: 24.9.0
       throat: 4.1.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
   jest-jasmine2@26.6.3:
     dependencies:

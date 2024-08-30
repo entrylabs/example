@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@entrylabs/entry':
-        specifier: ^4.0.11
-        version: 4.0.11(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))
+        specifier: ^4.0.12
+        version: 4.0.12(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))
       '@entrylabs/legacy-video':
         specifier: ^1.0.1
         version: 1.0.1
@@ -130,8 +130,8 @@ packages:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
     engines: {node: '>=10.0.0'}
 
-  '@entrylabs/entry@4.0.11':
-    resolution: {integrity: sha512-SxiYVuYuNt0+42Ig3rl4scN/vr8pLekCGozdIa0L3J9P116JG+PDVJag0IEoqFeg7kV5yYFg8QlcC10Q5pIJAg==}
+  '@entrylabs/entry@4.0.12':
+    resolution: {integrity: sha512-CqjWvKsuisr7TYrF04qZt5OlisZ5OwkLsj4eNItHEdz4FlQIwPDiaTaQZeWz+2JSzjgBP5EHQhIU0q2A1kucKg==}
 
   '@entrylabs/event@1.0.3':
     resolution: {integrity: sha512-IDC7sWnfe8GVQIEGsct9Bcsj1Nh4XikO6PG+veVuix0Zv/XH98NkFjmXiyrriJ/rjJoGFBq6sKesfmaFCCr3MA==}
@@ -3477,7 +3477,7 @@ snapshots:
 
   '@discoveryjs/json-ext@0.5.7': {}
 
-  '@entrylabs/entry@4.0.11(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))':
+  '@entrylabs/entry@4.0.12(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))':
     dependencies:
       '@entrylabs/event': 1.0.3
       '@mediapipe/tasks-vision': 0.10.14
