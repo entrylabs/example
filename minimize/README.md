@@ -6,6 +6,7 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/entrylabs/example/tree/main/minimize&project-name=entryjs-minimize&repository-name=entryjs-minimize)
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/entrylabs/example/tree/main/minimize)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/entrylabs/example/tree/main/minimize)
 
 ## How to use
 
