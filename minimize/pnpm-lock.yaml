@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@entrylabs/entry':
-        specifier: ^4.0.12
-        version: 4.0.12(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))
+        specifier: ^4.0.17
+        version: 4.0.17(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))
       '@entrylabs/legacy-video':
         specifier: ^1.0.1
         version: 1.0.1
@@ -130,8 +130,8 @@ packages:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
     engines: {node: '>=10.0.0'}
 
-  '@entrylabs/entry@4.0.12':
-    resolution: {integrity: sha512-CqjWvKsuisr7TYrF04qZt5OlisZ5OwkLsj4eNItHEdz4FlQIwPDiaTaQZeWz+2JSzjgBP5EHQhIU0q2A1kucKg==}
+  '@entrylabs/entry@4.0.17':
+    resolution: {integrity: sha512-GEwDO1oZeeOgk4hdwolnka7PafcX7yIr2S9xxPzFaY4Sw8GsX9gm2cTy8oq+RETe29aGRLDjigroSv+Uzj4Mdg==}
 
   '@entrylabs/event@1.0.3':
     resolution: {integrity: sha512-IDC7sWnfe8GVQIEGsct9Bcsj1Nh4XikO6PG+veVuix0Zv/XH98NkFjmXiyrriJ/rjJoGFBq6sKesfmaFCCr3MA==}
@@ -1426,7 +1426,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+    deprecated: Upgrade to fsevents v2 to mitigate potential security issues
 
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
@@ -3077,8 +3077,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  ua-parser-js@1.0.37:
-    resolution: {integrity: sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==}
+  ua-parser-js@1.0.40:
+    resolution: {integrity: sha512-z6PJ8Lml+v3ichVojCiB8toQJBuwR42ySM4ezjXIqXK3M0HczmKQ3LF4rhU55PfD99KEEXQG6yb7iOMyvYuHew==}
+    hasBin: true
 
   uid@0.0.2:
     resolution: {integrity: sha512-KerEqWSoUfzAYsB4RznGPygtEk1p04caicg8FxqzZ1VYI3GsYHPzouUO5jJvwwy4sg6B1jnSkSjYgGvE4CK6Gg==}
@@ -3477,7 +3478,7 @@ snapshots:
 
   '@discoveryjs/json-ext@0.5.7': {}
 
-  '@entrylabs/entry@4.0.12(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))':
+  '@entrylabs/entry@4.0.17(encoding@0.1.13)(webpack-cli@5.1.4(webpack@5.91.0))':
     dependencies:
       '@entrylabs/event': 1.0.3
       '@mediapipe/tasks-vision': 0.10.14
@@ -3509,7 +3510,7 @@ snapshots:
       simplebar: 3.1.5
       skmeans: 0.11.3
       socket.io-client: 2.5.0
-      ua-parser-js: 1.0.37
+      ua-parser-js: 1.0.40
       uid: 0.0.2
       webpack: 5.91.0(webpack-cli@5.1.4(webpack@5.91.0))
       worker-loader: 3.0.8(webpack@5.91.0(webpack-cli@5.1.4(webpack@5.91.0)))
@@ -7180,7 +7181,7 @@ snapshots:
 
   typescript@5.4.5: {}
 
-  ua-parser-js@1.0.37: {}
+  ua-parser-js@1.0.40: {}
 
   uid@0.0.2: {}
 
